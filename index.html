@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor de Rua</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.jfif" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar-logo">
+                <img src="img/logo.jfif" alt="">
+            </div>
+            <div>
+                <div class="link-navbar">
+                    <a href="#home">HOME</a>
+                    <a href="#cardapio">CARDÁPIO</a>
+                    <a href="adc-carrinho"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carrossel-manual" id="home">
+            <div class="carrossel-2">
+                <div class="card">
+                    <img src="img/card-cachorro-quente.jfif" alt="">
+                </div>
+                <div class="card">
+                    <img src="img/card-x-bacon.jfif" alt="">
+                </div>
+                <div class="card">
+                    <img src="img/card-combo.jfif" alt="">
+                </div>
+            </div>
+            <div class="direita">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+            <div class="esquerda">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </div>
+        </section>
+
+        <section id="cardapio" class="cardapio">
+            <h1>Cardápio</h1>
+            <h1>HOT-DOG</h1>
+            <div class="card-venda">                
+                <div class="card-produto">
+                    <img src="img/dog-molho.jfif" alt="">
+                    <p><strong>Sem Miséria no Molho</strong>: 2 salsichas, molho da casa, purê cremoso, milho, ervilha e batata palha.</p>
+                    <h2>R$ 15,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="img/dog-tradicional.jpg" alt="">
+                    <p><strong>Prensadão Tradicional</strong>: 1 salsicha, maionese temperada, milho, vinagrete e batata palha prensado.</p>
+                    <h2>R$ 12,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="img/dog-duplo-queijo.jfif" alt="">
+                    <p><strong>Dogão Duplo Queijo</strong>: 2 salsichas, coberto com muito cheddar, catupiry e bacon picado.</p>
+                    <h2>R$ 18,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="img/dog-calabresa-bacon.jfif" alt="">
+                    <p><strong>Dog Calabresa & Bacon</strong>: Salsicha, calabresa ralada na chapa, bacon crocante, purê e batata palha.</p>
+                    <h2>R$ 17,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+            </div>
+
+            <h1>HAMBURGUER</h1>
+            <div class="card-venda">
+                <div class="card-produto">
+                    <img src="img/x-tudo-mosntro.jpg" alt="">
+                    <p><strong>O Podrão (X-Tudo Monstro)</strong>: Hambúrguer 150g, ovo, presunto, queijo, bacon, calabresa, alface, tomate, milho e batata palha.</p>
+                    <h2>R$ 22,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="img/x-bacon.jfif" alt="">
+                    <p><strong>X-Bacon Crocante</strong>: Hambúrguer 150g, tiras de bacon duplo, queijo prato e maionese verde da casa.</p>
+                    <h2>R$ 20,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="img/x-classico.jpg" alt="">
+                    <p><strong>X-Salada Clássico</strong>: Hambúrguer 120g, queijo muçarela, alface americana, tomate fresco e molho especial.</p>
+                    <h2>R$ 16,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="" alt="">
+                    <p><strong>X-Frango Catupiry</strong>: Peito de frango desfiado na chapa, catupiry original, milho e batata palha.</p>
+                    <h2>R$ 18,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+            </div>
+
+            <h1>COMBOS</h1>
+            <div class="card-venda">
+                <div class="card-produto">
+                    <img src="" alt="">
+                    <p><strong>Combo A Fome Não Espera</strong>: X-Tudo Monstro + Batata Frita M + Refrigerante Lata (350ml).</p>
+                    <h2>R$ 34,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="" alt="">
+                    <p><strong>Combo Dogão Completo</strong>: Sem Miséria no Molho + Batata Frita P + Refrigerante Lata (350ml).</p>
+                    <h2>R$ 26,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="" alt="">
+                    <p><strong>Combo Casal da Rua</strong>: X-Bacon Crocante + Porção de Batata M + 2 Refrigerantes Lata.</p>
+                    <h2>R$ 52,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="" alt="">
+                    <p><strong>Combo Smash Lover</strong>: Smash Duplo Cheddar + Batata M + Milkshake de Ovomaltine (400ml).</p>
+                    <h2>R$ 32,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+            </div>
+
+            <h1>PORÇÕES & ACOMPANHAMENTOS</h1>
+            <div class="card-venda">
+                <div class="card-produto">
+                    <img src="" alt="">
+                    <p><strong>Batata Frita Suprema</strong>: Porção média de batata frita coberta com molho cheddar e bacon picado.</p>
+                    <h2>R$ 18,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="" alt="">
+                    <p><strong>Nuggets Crocantes (8 un)</strong>: Empanados de frango crocantes com molho barbecue ou maionese da casa.</p>
+                    <h2>R$ 14,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="" alt="">
+                    <p><strong>Anéis de Cebola (10 un)</strong>: Onion rings empanadas e douradas com molho especial.</p>
+                    <h2>R$ 15,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+                <div class="card-produto">
+                    <img src="" alt="">
+                    <p><strong>Milkshake de Ovomaltine (500ml)</strong>: Bati com sorvete de baunilha, calda de chocolate e pedaços crocantes.</p>
+                    <h2>R$ 16,90</h2>
+                    <button class="adc-carrinho">Adiciona no Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="finalizar">
+        <div class="info-pedido">
+            <span>Total do Pedido: <strong id="total-valor">R$ 0,00</strong></span>
+        </div>
+        <div class="btn-finalizar">
+            <button>Finalizar Pedido</button>
+        </div>
+    </footer>
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
