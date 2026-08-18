@@ -18,7 +18,8 @@
                 <div class="link-navbar">
                     <a href="#home">HOME</a>
                     <a href="#cardapio">CARDÁPIO</a>
-                    <a href="adc-carrinho"><ion-icon name="cart-outline"></ion-icon></a>
+                    <a href="#" id="cart-outline"><ion-icon name="cart-outline"></ion-icon></a>
+                    <span id="cont-carrinho">0</span>
                 </div>
             </div>
         </nav>
@@ -47,7 +48,7 @@
 
         <section id="cardapio" class="cardapio">
             <h1>Cardápio</h1>
-            <h1>HOT-DOG</h1>
+            <h2>HOT-DOG</h2>
             <div class="card-venda">                
                 <div class="card-produto">
                     <img src="img/dog-molho.jfif" alt="">
@@ -75,7 +76,7 @@
                 </div>
             </div>
 
-            <h1>HAMBURGUER</h1>
+            <h2>HAMBURGUER</h2>
             <div class="card-venda">
                 <div class="card-produto">
                     <img src="img/x-tudo-mosntro.jpg" alt="">
@@ -96,51 +97,51 @@
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
                 <div class="card-produto">
-                    <img src="" alt="">
+                    <img src="img/x-catupiry.jpg" alt="">
                     <p><strong>X-Frango Catupiry</strong>: Peito de frango desfiado na chapa, catupiry original, milho e batata palha.</p>
                     <h2>R$ 18,90</h2>
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
             </div>
 
-            <h1>COMBOS</h1>
+            <h2>COMBOS</h2>
             <div class="card-venda">
                 <div class="card-produto">
-                    <img src="" alt="">
+                    <img src="img/combo-x-tudo.png" alt="">
                     <p><strong>Combo A Fome Não Espera</strong>: X-Tudo Monstro + Batata Frita M + Refrigerante Lata (350ml).</p>
                     <h2>R$ 34,90</h2>
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
                 <div class="card-produto">
-                    <img src="" alt="">
+                    <img src="img/combo-dog-molho.png" alt="">
                     <p><strong>Combo Dogão Completo</strong>: Sem Miséria no Molho + Batata Frita P + Refrigerante Lata (350ml).</p>
                     <h2>R$ 26,90</h2>
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
                 <div class="card-produto">
-                    <img src="" alt="">
+                    <img src="img/combo-x-bacon.png" alt="">
                     <p><strong>Combo Casal da Rua</strong>: X-Bacon Crocante + Porção de Batata M + 2 Refrigerantes Lata.</p>
                     <h2>R$ 52,90</h2>
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
                 <div class="card-produto">
-                    <img src="" alt="">
+                    <img src="img/combo-smash-duplo.png" alt="">
                     <p><strong>Combo Smash Lover</strong>: Smash Duplo Cheddar + Batata M + Milkshake de Ovomaltine (400ml).</p>
                     <h2>R$ 32,90</h2>
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
             </div>
 
-            <h1>PORÇÕES & ACOMPANHAMENTOS</h1>
+            <h2>PORÇÕES & ACOMPANHAMENTOS</h2>
             <div class="card-venda">
                 <div class="card-produto">
-                    <img src="" alt="">
+                    <img src="img/batata-chedar.png" alt="">
                     <p><strong>Batata Frita Suprema</strong>: Porção média de batata frita coberta com molho cheddar e bacon picado.</p>
                     <h2>R$ 18,90</h2>
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
                 <div class="card-produto">
-                    <img src="" alt="">
+                    <img src="img/frango-empanado.png" alt="">
                     <p><strong>Nuggets Crocantes (8 un)</strong>: Empanados de frango crocantes com molho barbecue ou maionese da casa.</p>
                     <h2>R$ 14,90</h2>
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
@@ -166,9 +167,77 @@
             <span>Total do Pedido: <strong id="total-valor">R$ 0,00</strong></span>
         </div>
         <div class="btn-finalizar">
-            <button>Finalizar Pedido</button>
+            <button id="abrir-modal">Finalizar Pedido</button>
         </div>
     </footer>
+
+    <div id="modal-carrinho" class="modal oculto">
+        <div class="modal-conteudo">
+            <button id="btn-fechar-modal" class="btn-fechar">&times;</button>
+
+            <div id="etapa-carrinho">
+                <h2>Seu Pedido</h2>
+                <div id="lista-carrinho" class="lista-itens"></div>
+                <div class="modal-resumo">
+                    <span>Total: <strong id="modal-total-valor">R$ 0,00</strong></span>
+                </div>
+                <button id="btn-ir-pagamento" class="btn-pagamento">Pagamento</button>
+            </div>
+
+            <div id="etapa-pagamento" class="oculto">
+                <h2>Forma de Pagamento</h2>
+                <div class="opcoes-pagamento">
+                    <button class="btn-opcao-pgto" data-forma="pix">
+                        <ion-icon name="qr-code-outline"></ion-icon> PIX
+                    </button>
+                    <button class="btn-opcao-pgto" data-forma="debito">
+                        <ion-icon name="card-outline"></ion-icon> Cartão de Débito
+                    </button>
+                    <button class="btn-opcao-pgto" data-forma="credito">
+                        <ion-icon name="card-outline"></ion-icon> Cartão de Crédito
+                    </button>
+                </div>
+                <button id="btn-voltar-carrinho" class="btn-voltar">Voltar ao Carrinho</button>
+            </div>
+
+            <div id="etapa-cartao" class="oculto">
+                <h2>Dados do Cartão</h2>
+                <form id="form-cartao">
+                    <div class="campo-grupo">
+                        <label for="cartao-nome">Nome impresso no cartão</label>
+                        <input type="text" id="cartao-nome" placeholder="NOME COMO ESTÁ NO CARTÃO" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="cartao-numero">Número do Cartão</label>
+                        <input type="text" id="cartao-numero" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                    </div>
+
+                    <div class="linha-dupla">
+                        <div class="campo-grupo">
+                            <label for="cartao-validade">Validade</label>
+                            <input type="text" id="cartao-validade" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="campo-grupo">
+                            <label for="cartao-cvv">CVV</label>
+                            <input type="text" id="cartao-cvv" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-confirmar-pagamento">Confirmar e Pagar</button>
+                    <button type="button" id="btn-voltar-opcoes-pgto" class="btn-voltar">Voltar</button>
+                </form>
+            </div>
+
+            <div id="etapa-sucesso" class="oculto">
+                <h2>Pedido Confirmado!</h2>
+                <p>Sua senha é:</p>
+                <h1 id="numero-senha">#000</h1>
+                <p>Retire seu comprovante e aguarde ser chamado no painel.</p>
+            </div>
+        </div>
+
+    </div>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>

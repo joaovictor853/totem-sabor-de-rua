@@ -39,6 +39,20 @@ nav{
 nav ion-icon {
     color: white;
     font-size: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+#cont-carrinho{
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    right: 3rem;
+    font-size: 1rem;
+    background-color:rgb(114, 110, 110);
+    border-radius: 50%;
+    color: white;
+    min-width: 1rem;
+    text-align: center;
 }
 
 .carrossel-manual {
@@ -64,8 +78,9 @@ nav ion-icon {
 
 .card img {
     width: 100%;
-    height: 60rem;
+    height: 35rem;
     display: block;
+    object-fit: cover;
 }
 
 .esquerda, .direita {
@@ -93,7 +108,12 @@ nav ion-icon {
 
 .cardapio h1{
     padding: 1rem;
-    color: rgb(250, 224, 176);
+    color: rgb(90, 61, 6);
+    background-color: orange;
+}
+.cardapio h2{
+    padding: 1rem;
+    color: rgb(90, 61, 6);
     background-color: orange;
 }
 
@@ -126,7 +146,7 @@ nav ion-icon {
     max-width: 100%;
     height: 120px; 
     object-fit: cover; 
-    display: block
+    display: block;
     
 }
 
@@ -138,6 +158,12 @@ nav ion-icon {
     padding: 1rem;
     font-size: large;
 }
+
+.card-produto h2{
+    background-color: rgb(250, 224, 176);
+    color: black;
+}
+
 .card-produto button{
     background-color: orange;
     padding: 0.5rem 1.5rem;
@@ -155,25 +181,194 @@ nav ion-icon {
     padding: 2rem 3rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: rgb(250, 224, 176);
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
 }
 
 .info-pedido span{
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .btn-finalizar button{
     background-color: orange;
+    color: rgb(250, 224, 176);
+    font-weight: bold;
     padding: 0.5rem 1.5rem;
     border-radius: 7rem;
     font-size: 1.2rem;
     border: none;
     outline: none;
+    transition: 0.2s;
 }
 
 .btn-finalizar button:hover{
     cursor: pointer;
     opacity: 0.5;
+}
+
+.oculto{
+    display: none !important;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal-conteudo {
+    background-color: rgb(250, 224, 176);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    text-align: center;
+}
+
+.btn-fechar{
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+.modal h2 {
+    margin-bottom: 1.2rem;
+    color: orange;
+}
+
+
+.lista-itens {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.modal-resumo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+
+.opcoes-pagamento {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.btn-opcao-pgto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 0.8rem;
+    border: 2px solid orange;
+    background-color: #fff;
+    color: #6e6b6b;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-opcao-pgto:hover {
+    background-color: orange;
+    color: rgb(250, 224, 176);
+}
+
+.btn-opcao-pgto ion-icon {
+    font-size: 1.5rem;
+}
+
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.campo-grupo label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #6e6b6b;
+    margin-bottom: 0.3rem;
+}
+
+.campo-grupo input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.campo-grupo input:focus {
+    border-color: orange;
+}
+
+.linha-dupla {
+    display: flex;
+    gap: 1rem;
+}
+
+.linha-dupla .campo-grupo {
+    flex: 1;
+}
+
+
+.btn-pagamento, .btn-confirmar-pagamento {
+    width: 100%;
+    background-color: orange;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.btn-voltar {
+    width: 100%;
+    background-color: orange;
+    color: black;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+
+#etapa-sucesso h1 {
+    font-size: 3rem;
+    color: orange;
+    margin: 1rem 0;
 }
 
 
