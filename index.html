@@ -147,18 +147,17 @@
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
                 <div class="card-produto">
-                    <img src="" alt="">
+                    <img src="img/orin-rings.png" alt="">
                     <p><strong>Anéis de Cebola (10 un)</strong>: Onion rings empanadas e douradas com molho especial.</p>
                     <h2>R$ 15,90</h2>
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
                 <div class="card-produto">
-                    <img src="" alt="">
+                    <img src="img/milkshake.png" alt="">
                     <p><strong>Milkshake de Ovomaltine (500ml)</strong>: Bati com sorvete de baunilha, calda de chocolate e pedaços crocantes.</p>
                     <h2>R$ 16,90</h2>
                     <button class="adc-carrinho">Adiciona no Carrinho</button>
                 </div>
-            </div>
         </section>
     </main>
 
@@ -198,6 +197,15 @@
                     </button>
                 </div>
                 <button id="btn-voltar-carrinho" class="btn-voltar">Voltar ao Carrinho</button>
+            </div>
+
+            <div id="etapa-pix" class="oculto">
+                <h2>Pagamento via PIX</h2>
+                <p style="margin-bottom: 1rem; color: black;">Escaneie o QR Code abaixo para pagar:</p>
+                <img src="img/qr-code.png" alt="QR Code PIX" style="width: 180px; height: 180px; margin: 0 auto 1rem; display: block; border: 1px solid white; padding: 5px; border-radius: 8px;">
+
+                <button id="btn-confirmar-pix" class="btn-confirmar-pagamento" onclick="finalizarPedido()">Já fiz o pagamento</button>
+                <button id="btn-voltar-pix" class="btn-voltar">Voltar</button>
             </div>
 
             <div id="etapa-cartao" class="oculto">
