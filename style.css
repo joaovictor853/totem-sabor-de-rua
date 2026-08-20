@@ -105,7 +105,7 @@ nav ion-icon {
     font-size: 3rem;
 }
 
-.cardapio h1{
+.container my-4 h1{
     padding: 1rem;
     color: rgb(90, 61, 6);
     background-color: orange;
@@ -123,7 +123,6 @@ nav ion-icon {
     padding: 1rem;
     width: 100%;
     background-color: orange;
-    
 }
     
 
@@ -150,22 +149,23 @@ nav ion-icon {
 }
 
 .card-produto strong{
-    font-size: x-large;
+    font-size: 1.1rem;
 }
 
 .card-produto p{
     padding: 1rem;
-    font-size: large;
+    font-size: 1rem;
 }
 
 .card-produto h2{
+    font-size: 1.1rem;
     background-color: rgb(250, 224, 176);
     color: black;
 }
 
 .card-produto button{
     background-color: orange;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.2rem;
     border-radius: 7rem;
     border: none;
     outline: none;
