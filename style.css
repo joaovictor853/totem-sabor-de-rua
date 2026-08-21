@@ -21,7 +21,7 @@ nav{
     padding: 0.5rem 2rem;
     display: flex;
     justify-content: space-around;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
     font-weight: bold; 
 }
@@ -77,9 +77,11 @@ nav ion-icon {
 }
 
 .card img {
-    max-width: 100vw;
     width: 100%;
-    height: 70vh;
+    height: 80rem;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .esquerda, .direita {
@@ -105,27 +107,21 @@ nav ion-icon {
     font-size: 3rem;
 }
 
-.container my-4 h1{
-    padding: 1rem;
-    color: rgb(90, 61, 6);
-    background-color: orange;
-}
-.cardapio h2{
-    padding: 1rem;
-    color: rgb(90, 61, 6);
+.nav-categorias{
     background-color: orange;
 }
 
-.card-venda{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+main{
+    background-color: orange;
+}
+
+#cardapio{
     gap: 1.2rem;
     padding: 1rem;
     width: 100%;
     background-color: orange;
 }
     
-
 
 .card-produto{
     background-color: rgb(250, 224, 176);
@@ -309,7 +305,7 @@ nav ion-icon {
 }
 
 .campo-grupo label {
-    font-size: 0.85rem;
+    font-size: 0.80rem;
     font-weight: bold;
     color: #6e6b6b;
     margin-bottom: 0.3rem;
@@ -370,6 +366,55 @@ nav ion-icon {
     color: orange;
     margin: 1rem 0;
 }
+
+@media screen and (max-width: 839px) {
+    .card img{
+        max-height: 100%;
+        max-width: 100vw;
+        height: 95vh;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .card img{
+        height: 70vh;
+    }
+}
+
+
+@media screen and (max-width: 520px) {
+    .link-navbar{
+        gap: 1rem;
+    }
+    
+    
+    .linha-dupla{
+        flex-direction: column;
+    }
+
+    .finalizar{
+        gap: 1rem;
+    }
+
+    .info-pedido{
+        font-size: 0.5rem;
+    }
+
+    .btn-finalizar{
+        font-size: 0.5rem;
+    }
+        
+    }
+
+
+@media screen and (max-width: 420px) {
+        #cont-carrinho{
+            display: none;
+        }
+    }
+
+    
+
 
 
 
